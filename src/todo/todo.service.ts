@@ -20,6 +20,7 @@ export class TodoService {
   }
 
   deleteTodo(id: string) {
-    return 'Delete todo';
+    this.todos = this.todos.filter((todo) => todo.id !== id);
+    return `Delete todo ${id}`;
   }
 }
